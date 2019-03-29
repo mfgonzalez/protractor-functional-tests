@@ -19,6 +19,6 @@ before_:
   - sleep 3
 
 install:
-  - npm install
-:
-  - npm test
+  - npm install -g protractor
+script:
+  - protractor conf.js
