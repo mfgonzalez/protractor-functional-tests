@@ -75,9 +75,10 @@ describe('Protractor Demo App', function(){
 	*/
 	it('Deve informar email e password para login', function(){
 		clicarLinkSignIn();
-		//TODO: DIGITAR UM EMAIL VALIDO
+		var email =$('#email');
+		email.sendKeys('mfgonzalez@gmail.com');
 		clicarBotaoPorId('SubmitLogin');
-		expect($('.alert-danger > ol > li').getText()).toEqual('An email address required.');
+		expect($('.alert-danger > ol > li').getText()).toEqual('Password is required.');
 	});
 
 	/*
@@ -118,9 +119,10 @@ describe('Protractor Demo App', function(){
 	*/
 	it('Deve informar email e mensagem para contato', function(){
 		clicarHref('#contact-link');
-		//TODO: DIGITAR UM EMAIL VALIDO
+		var email =$('#email');
+		email.sendKeys('mfgonzalez@gmail.com');
 		clicarBotaoPorId('submitMessage');
-		expect($('.alert-danger ol > li').getText()).toEqual('Invalid email address.');
+		expect($('.alert-danger ol > li').getText()).toEqual('The message cannot be blank.');
 	});
 
 });
