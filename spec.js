@@ -38,6 +38,10 @@ describe('Protractor Demo App', function(){
 	**	Quando clicar no botão de pesquisa (lupa)
 	**	Então exibir a tela de resultdo de busca com a mensagem "Please enter a search keyword"
 	*/
+	it('Deve informar algo na caixa de texto de pesquisa', function() {
+		clicarBotaoPorName('submit_search');
+		expect($('.alert-warning').getText()).toEqual('Please enter a search keyword');
+	});
 
 	/*
 	**	2) Dado que o usuário não informa o e-mail na tela de "sign in"
@@ -58,7 +62,7 @@ describe('Protractor Demo App', function(){
 	**	Quando clicar no botão "Sign in"
 	**	Então exibir a mensagem "An email address required."
 	*/
-	it('Deve informar email e password para login', function(){
+	it('Deve informar email para login', function(){
 		clicarLinkSignIn();
 		clicarBotaoPorId('SubmitLogin');
 		expect($('.alert-danger > ol > li').getText()).toEqual('An email address required.');
@@ -69,6 +73,12 @@ describe('Protractor Demo App', function(){
 	**	Quando clicar no botão "Sign in"
 	**	Então exibir a mensagem "Password is required."
 	*/
+	it('Deve informar email e password para login', function(){
+		clicarLinkSignIn();
+		//TODO: DIGITAR UM EMAIL VALIDO
+		clicarBotaoPorId('SubmitLogin');
+		expect($('.alert-danger > ol > li').getText()).toEqual('An email address required.');
+	});
 
 	/*
 	**	5) Dado que o usuário não informa o e-mail
@@ -106,5 +116,11 @@ describe('Protractor Demo App', function(){
 	**	Quando clicar no botão "Send" da tela de contato
 	**	Então exibe a mensagem "The message cannot be blank."
 	*/
+	it('Deve informar email e mensagem para contato', function(){
+		clicarHref('#contact-link');
+		//TODO: DIGITAR UM EMAIL VALIDO
+		clicarBotaoPorId('submitMessage');
+		expect($('.alert-danger ol > li').getText()).toEqual('Invalid email address.');
+	});
 
 });

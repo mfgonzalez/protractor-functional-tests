@@ -1,0 +1,473 @@
+{
+  "id": "4d87d85a-19a0-4638-9780-ce2a7436f161",
+  "version": "2.0",
+  "name": "automation-practice",
+  "url": "http://automationpractice.com",
+  "tests": [{
+    "id": "84954675-7a4b-47af-9a9b-900a4164f846",
+    "name": "deveInformarEmailNoSignIn",
+    "commands": [{
+      "id": "72e88794-b829-426e-9d8e-d5016c38edec",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "980bff72-0385-45fa-b6e7-137996b28124",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1014x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f3041590-c52d-4206-a475-b642fd02c74e",
+      "comment": "",
+      "command": "clickAt",
+      "target": "linkText=Sign in",
+      "targets": [
+        ["linkText=Sign in", "linkText"],
+        ["css=.login", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign in')]", "xpath:link"],
+        ["xpath=//header[@id='header']/div[2]/div/div/nav/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://automationpractice.com/index.php?controller=my-account']", "xpath:href"],
+        ["xpath=//nav/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c17a597b-b159-440d-a197-8f519d66e901",
+      "comment": "",
+      "command": "click",
+      "target": "id=SubmitCreate",
+      "targets": [
+        ["id=SubmitCreate", "id"],
+        ["name=SubmitCreate", "name"],
+        ["css=#SubmitCreate", "css:finder"],
+        ["xpath=//button[@id='SubmitCreate']", "xpath:attributes"],
+        ["xpath=//form[@id='create-account_form']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "009d80d0-651e-41d1-9f85-2477b0ab095a",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='create_account_error']/ol/li",
+      "targets": [
+        ["id=columns", "id"],
+        ["css=#columns", "css:finder"],
+        ["xpath=//div[@id='columns']", "xpath:attributes"],
+        ["xpath=//div[@id='page']/div[2]/div", "xpath:idRelative"],
+        ["xpath=//body/div/div[2]/div", "xpath:position"]
+      ],
+      "value": "Invalid email address."
+    }]
+  }, {
+    "id": "98ddbd6a-f536-43e1-b92d-4598ff2e2d3c",
+    "name": "deveInformarErroAoNaoInformarPalavraChaveParaPesquisa",
+    "commands": [{
+      "id": "946dbf06-9b83-408e-9f64-2c99a0921c1c",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7d8ab1f4-f18a-49e6-b851-4b6e227dc401",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1014x680",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f71a4ce5-e97f-4443-8b28-57e6f4e5ae35",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit_search",
+      "targets": [
+        ["name=submit_search", "name"],
+        ["css=.button-search", "css:finder"],
+        ["xpath=//button[@name='submit_search']", "xpath:attributes"],
+        ["xpath=//form[@id='searchbox']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "07799d2f-c634-4906-bb81-d70a36f00210",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=/html/body/div/div[2]/div/div[3]/div[2]/p",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//div[@id='center_column']/p", "xpath:idRelative"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Please enter a search keyword')]", "xpath:innerText"]
+      ],
+      "value": "Please enter a search keyword"
+    }]
+  }, {
+    "id": "fda6ab76-1c25-43c3-8c71-ed9c3b76835c",
+    "name": "deveInformarEmailEPasswordParaLogin",
+    "commands": [{
+      "id": "95d5f6ad-22c2-4371-8aa0-bf0fe3e2ec2a",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7d333325-b267-4ea9-b045-8cff37dda73c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1014x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c1c5829f-32a5-4ff1-a81e-828760691d07",
+      "comment": "",
+      "command": "clickAt",
+      "target": "linkText=Sign in",
+      "targets": [
+        ["linkText=Sign in", "linkText"],
+        ["css=.login", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign in')]", "xpath:link"],
+        ["xpath=//header[@id='header']/div[2]/div/div/nav/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://automationpractice.com/index.php?controller=my-account']", "xpath:href"],
+        ["xpath=//nav/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c447daec-19f0-4418-a416-1a45f8edcf81",
+      "comment": "",
+      "command": "click",
+      "target": "id=SubmitLogin",
+      "targets": [
+        ["id=SubmitCreate", "id"],
+        ["name=SubmitCreate", "name"],
+        ["css=#SubmitCreate", "css:finder"],
+        ["xpath=//button[@id='SubmitCreate']", "xpath:attributes"],
+        ["xpath=//form[@id='create-account_form']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e34c6672-179b-4ef2-acb5-f83b8b5e863a",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@class='alert alert-danger']/ol/li",
+      "targets": [
+        ["id=columns", "id"],
+        ["css=#columns", "css:finder"],
+        ["xpath=//div[@id='columns']", "xpath:attributes"],
+        ["xpath=//div[@id='page']/div[2]/div", "xpath:idRelative"],
+        ["xpath=//body/div/div[2]/div", "xpath:position"]
+      ],
+      "value": "An email address required."
+    }]
+  }, {
+    "id": "44e7e4aa-12a3-4f9b-b475-0478ff520ab1",
+    "name": "deveInformarPasswordParaLogin",
+    "commands": [{
+      "id": "cc137291-5798-44e6-a2d7-b4f983c760d5",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6774ea2b-7296-4a0c-8e6f-4735ab099c52",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign in",
+      "targets": [
+        ["linkText=Sign in", "linkText"],
+        ["css=.login", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign in')]", "xpath:link"],
+        ["xpath=//header[@id='header']/div[2]/div/div/nav/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://automationpractice.com/index.php?controller=my-account']", "xpath:href"],
+        ["xpath=//nav/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1a16f4e-04f0-4596-8fae-bea251e937f8",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='login_form']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f66e078-75b9-4ed9-a07c-4f8bc2fc7673",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='login_form']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div/div/input", "xpath:position"]
+      ],
+      "value": "mfgonzalez@gmail.com"
+    }, {
+      "id": "e4aa6aba-47a3-4711-b56c-7e45715cb2bc",
+      "comment": "",
+      "command": "click",
+      "target": "id=SubmitLogin",
+      "targets": [
+        ["id=SubmitLogin", "id"],
+        ["name=SubmitLogin", "name"],
+        ["css=#SubmitLogin", "css:finder"],
+        ["xpath=//button[@id='SubmitLogin']", "xpath:attributes"],
+        ["xpath=//form[@id='login_form']/div/p[2]/button", "xpath:idRelative"],
+        ["xpath=//p[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db83cc5d-8791-4210-99d4-5450d68b6b80",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@class='alert alert-danger']/ol/li",
+      "targets": [
+        ["id=columns", "id"],
+        ["css=#columns", "css:finder"],
+        ["xpath=//div[@id='columns']", "xpath:attributes"],
+        ["xpath=//div[@id='page']/div[2]/div", "xpath:idRelative"],
+        ["xpath=//body/div/div[2]/div", "xpath:position"]
+      ],
+      "value": "Password is required."
+    }]
+  }, {
+    "id": "97a89b80-c16e-4948-b138-f8265d3146f7",
+    "name": "deveInformarEmailParaAssinarNewsletter",
+    "commands": [{
+      "id": "4917c80e-69ec-4b15-af85-25d09797589e",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "56134182-680a-4770-bdad-74ca519c0e81",
+      "comment": "",
+      "command": "click",
+      "target": "name=submitNewsletter",
+      "targets": [
+        ["name=submitNewsletter", "name"],
+        ["css=.button-small:nth-child(2)", "css:finder"],
+        ["xpath=//button[@name='submitNewsletter']", "xpath:attributes"],
+        ["xpath=//div[@id='newsletter_block_left']/div/form/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "65c4efb8-3828-4878-9ef4-4fcdcda1b6c7",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,266)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0670029d-4a81-492d-adec-28e16012fdb0",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//p[@class='alert alert-danger']",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//div[@id='columns']/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Newsletter : Invalid email address.')]", "xpath:innerText"]
+      ],
+      "value": "Newsletter : Invalid email address."
+    }]
+  }, {
+    "id": "61f07769-3760-4c56-8a09-eabe749028c9",
+    "name": "carrinhoVazio",
+    "commands": [{
+      "id": "2c868fcf-1215-4e6e-b16d-28b27c7fed5a",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c2ea3d81-8f86-4159-88a6-3b0f8b90c6e0",
+      "comment": "",
+      "command": "click",
+      "target": "css=b",
+      "targets": [
+        ["css=b", "css:finder"],
+        ["xpath=//header[@id='header']/div[3]/div/div/div[3]/div/a/b", "xpath:idRelative"],
+        ["xpath=//b", "xpath:position"],
+        ["xpath=//b[contains(.,'Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0cb81c5-5d90-442a-b04e-3ecf5ebd08b6",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//p[@class='alert alert-warning']",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//div[@id='center_column']/p", "xpath:idRelative"],
+        ["xpath=//div[3]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Your shopping cart is empty.')]", "xpath:innerText"]
+      ],
+      "value": "Your shopping cart is empty."
+    }]
+  }, {
+    "id": "efa06fb1-1ddd-4b6c-839f-7b3d65514023",
+    "name": "deveInformarEmailParaContato",
+    "commands": [{
+      "id": "152b078c-9c3d-406d-a76e-066ac5ffd399",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4427d535-422c-453f-ba10-cc409b093889",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Contact us",
+      "targets": [
+        ["linkText=Contact us", "linkText"],
+        ["css=#contact-link > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Contact us')]", "xpath:link"],
+        ["xpath=//div[@id='contact-link']/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://automationpractice.com/index.php?controller=contact']", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Contact us')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a6c7704c-91e7-45f1-933d-dce00a8beb0a",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitMessage",
+      "targets": [
+        ["id=submitMessage", "id"],
+        ["name=submitMessage", "name"],
+        ["css=#submitMessage", "css:finder"],
+        ["xpath=//button[@id='submitMessage']", "xpath:attributes"],
+        ["xpath=//div[@id='center_column']/form/fieldset/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Send')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "151173e9-0a1d-47a3-be40-97b00c4d1bb0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=ol > li",
+      "targets": [
+        ["css=ol > li", "css:finder"],
+        ["xpath=//div[@id='center_column']/div/ol/li", "xpath:idRelative"],
+        ["xpath=//ol/li", "xpath:position"],
+        ["xpath=//li[contains(.,'Invalid email address.')]", "xpath:innerText"]
+      ],
+      "value": "Invalid email address."
+    }]
+  }, {
+    "id": "f27237a7-beb3-4d28-8596-80e8b7275b4a",
+    "name": "informaSomenteEmailParaContato",
+    "commands": [{
+      "id": "8f540a90-336d-42a8-8b6f-8145c63f8e00",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "38aa454d-8ad8-4691-aca6-86264199ea60",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Contact us",
+      "targets": [
+        ["linkText=Contact us", "linkText"],
+        ["css=#contact-link > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Contact us')]", "xpath:link"],
+        ["xpath=//div[@id='contact-link']/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://automationpractice.com/index.php?controller=contact']", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Contact us')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "39058079-ea90-440c-9275-9448f104c966",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=from", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='center_column']/form/fieldset/div/div/p[4]/input", "xpath:idRelative"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "329e6aa7-beaa-4866-8e06-7b00960d26e3",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=from", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='center_column']/form/fieldset/div/div/p[4]/input", "xpath:idRelative"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": "mfgonzalez@gmail.com"
+    }, {
+      "id": "5ca297e2-b591-4717-bd9d-4c524ece2f24",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitMessage",
+      "targets": [
+        ["id=submitMessage", "id"],
+        ["name=submitMessage", "name"],
+        ["css=#submitMessage", "css:finder"],
+        ["xpath=//button[@id='submitMessage']", "xpath:attributes"],
+        ["xpath=//div[@id='center_column']/form/fieldset/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Send')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "21c38471-56b2-4c4b-9d50-095e84fb062e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=ol > li",
+      "targets": [
+        ["css=ol > li", "css:finder"],
+        ["xpath=//div[@id='center_column']/div/ol/li", "xpath:idRelative"],
+        ["xpath=//ol/li", "xpath:position"],
+        ["xpath=//li[contains(.,'Invalid email address.')]", "xpath:innerText"]
+      ],
+      "value": "The message cannot be blank."
+    }]
+  }],
+  "suites": [{
+    "id": "d45236ba-3e9d-43c1-867b-7917a9ba07e1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://automationpractice.com/"],
+  "plugins": []
+}
