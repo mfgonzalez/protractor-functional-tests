@@ -3,13 +3,13 @@
   "name": "protractor",
   "version": "1.0.0",
   "description": "",
-  "main": "config.js",
+  "main": "conf.js",
   "dependencies": {
     "jasmine-reporters": "^2.2.1",
     "protractor": "^5.2.0"
   },
   "scripts": {
-    "test": "protractor config.js"
+    "test": "protractor conf.js"
   },
   "author": "",
   "license": "ISC"
