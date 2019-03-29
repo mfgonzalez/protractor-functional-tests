@@ -2,6 +2,8 @@
 
 ## Exercícios da disciplina de Qualidade de Software
 
+[![Build Status](https://travis-ci.org/mfgonzalez/protractor-functional-tests.svg?branch=master)](https://travis-ci.org/mfgonzalez/protractor-functional-tests)
+
 ### Critérios de Aceitação
 
 1) Dado que o usuário não digita nada na caixa de texto de pesquisa
