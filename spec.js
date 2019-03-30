@@ -5,33 +5,35 @@ describe('Protractor Demo App', function(){
 
 	var url = 'http://automationpractice.com/index.php';
 
-	beforeEach(function(){
+	beforeEach(function() {
 		browser.waitForAngularEnabled(false);
 		browser.get(url);
 	});
 	
-	function clicarHref(ref){
+	function clicarHref(ref) {
 		var cartLink = $(ref +' > a');
 		cartLink.click();
 	}
 
-	function clicarLinkSignIn()
-	{
+	function clicarLinkSignIn() {
 		var signInLink = element(by.linkText('Sign in'));
 		signInLink.click();
 	};
 
-	function clicarBotaoPorId(botao)
-	{
+	function clicarBotaoPorId(botao) {
 		var btn = element(by.id(botao));
 		btn.click();
 	};
 
-	function clicarBotaoPorName(botao)
-	{
+	function clicarBotaoPorName(botao) {
 		var btn = element(by.name(botao));
 		btn.click();
 	};
+	
+	function preencheEmail(id) {
+		var email =$(id);
+		email.sendKeys('mfgonzalez@gmail.com');
+	}
 
 	/*
 	**	1) Dado que o usuário não digita nada na caixa de texto de pesquisa
@@ -75,8 +77,7 @@ describe('Protractor Demo App', function(){
 	*/
 	it('Deve informar email e password para login', function(){
 		clicarLinkSignIn();
-		var email =$('#email');
-		email.sendKeys('mfgonzalez@gmail.com');
+		preencheEmail('#email');
 		clicarBotaoPorId('SubmitLogin');
 		expect($('.alert-danger > ol > li').getText()).toEqual('Password is required.');
 	});
@@ -119,8 +120,7 @@ describe('Protractor Demo App', function(){
 	*/
 	it('Deve informar email e mensagem para contato', function(){
 		clicarHref('#contact-link');
-		var email =$('#email');
-		email.sendKeys('mfgonzalez@gmail.com');
+		preencheEmail('#email');
 		clicarBotaoPorId('submitMessage');
 		expect($('.alert-danger ol > li').getText()).toEqual('The message cannot be blank.');
 	});
